@@ -13,7 +13,58 @@ body {
   background: var(--bg-main);
   color: var(--text-main);
 }
+/* ======================
+   HERO 
+====================== */
 
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.hero-text .subtitle {
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+  color: var(--accent-soft);
+}
+
+.hero-text .location {
+  margin-top: 0.4rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+}
 .hero.corporate {
   text-align: center;
   padding: 3rem 1rem;
@@ -182,9 +233,45 @@ footer {
   opacity: 0.9;
 }
 
-/* Responsive */
+/* ======================
+   TIMELINE HEADER + LOGOS
+====================== */
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.company-logo {
+  width: 55px;
+  height: auto;
+  object-fit: contain;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.timeline-header h4 {
+  margin: 0.2rem 0;
+  font-weight: normal;
+  color: var(--accent-soft);
+}
+
+.timeline-header span {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
 
 @media (max-width: 700px) {
+
   .timeline {
     padding-left: 20px;
   }
@@ -192,10 +279,17 @@ footer {
   .timeline-dot {
     left: -8px;
   }
-}
 
-@media (max-width: 700px) {
   section {
     padding: 2rem 1rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    width: 45px;
   }
 }
